@@ -19,7 +19,7 @@ function handleResponse(response){
     date:new Date(response.data.dt * 1000),
     city:response.data.name,
     description:response.data.weather[0].description,
-    iconUrl:"http://openweathermap.org/img/w/" + response.data.weather[0].icon + ".png",
+    iconUrl:`http://openweathermap.org/img/wn/${response.data.weather[0].icon }.png`,
 
    })
 
