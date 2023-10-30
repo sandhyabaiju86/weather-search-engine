@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 import axios from 'axios';
 import { FallingLines } from  'react-loader-spinner';
-import FormattedDate from "./formattedDate";
+import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
 
-export default function Weather(){
+export default function Weather(props){
+    const[city,setCity]=useState(props.defaultCity)
     const[loaded,setLoaded]=useState(false)
     const[weatherData, setWeatherData]=useState({loaded:false})
 function handleResponse(response){
@@ -25,20 +26,19 @@ function handleResponse(response){
 }
 function handleOnSubmit(event){
     event.preventDefault();  
+    //Search for a city
     search();
    
 }
 function search(){
-  
-        console.log(loaded)
         const apiKey = "ce144f0cf51fa43f03431f0488a36728";
-        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${loaded}&appid=${apiKey}&units=metric`;
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(handleResponse);
  
 }
 function handleCity(event){
     event.preventDefault();
-    setLoaded(event.target.value)
+    setCity(event.target.value)
    
 }
 
@@ -58,30 +58,8 @@ if(loaded){
                 </div>
             </div>
         </form>
-        <div>
-        <h1 className="text-capitalize">{weatherData.city}</h1>
-        <ul>
-            <li><FormattedDate date={weatherData.date}/></li>
-            <li className="text-capitalize">{weatherData.description}</li>
-        </ul>
-        </div>
-        <div>
-            <div className="row mt-4">
-                <div className="col-6">
-                    <img className="text-capitalize" src={weatherData.iconUrl} alt={weatherData.description}/>
-                    <span className="temperature">{weatherData.temperature}</span>
-                    <span className="unit">&deg;C</span>
-                </div>
-                <div className="col-6">
-                    <ul>
-                        <li className="text-capitalize">Precipitation :{weatherData.precipitation}</li>
-                        <li >Humidity : {weatherData.humidity}%</li>
-                        <li>Wind : {weatherData.wind}Km/h</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        </div>
+        <WeatherInfo data={weatherData}/>
+    </div>
     )
  }
  else{
