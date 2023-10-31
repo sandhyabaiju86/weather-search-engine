@@ -44,6 +44,9 @@
     font-size: 64px;
     font-weight: 400;
     line-height: 64px;
+    position: relative;
+    top: -60px;
+    left:60px
 }
 .Weather .unit{
     color: black;
@@ -52,5 +55,6 @@
     margin-right: 5px;
     line-height: 1;
     position: relative;
-    top: -34px;
+    top: -100px;
+    left:50px
 }
