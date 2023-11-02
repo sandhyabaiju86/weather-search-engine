@@ -54,7 +54,7 @@ if(loaded){
                 </div>
                 <div className="col-4">
                     <button type="submit" 
-                   className="btn btn-primary w-100" >Search</button>
+                   className="btn btn-primary w-100 search " >Search</button>
                 </div>
             </div>
         </form>
@@ -66,7 +66,7 @@ if(loaded){
     search();
     return(<FallingLines
         color="#4fa94d"
-        width="400"
+        width="200"
         visible={true}
         ariaLabel='falling-lines-loading'
       />)
