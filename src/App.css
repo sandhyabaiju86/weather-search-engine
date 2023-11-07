@@ -12,10 +12,12 @@
     padding-top: 50px;
 }
 .App footer{
-    font-size: 11px;
+    font-size: 18px;
+    color: #24368D;
     margin: 20px;
     text-align: center;
-}
-.App footer{
     padding-bottom: 40px;
+}
+.App footer a{
+    color:#FF057C
 }
