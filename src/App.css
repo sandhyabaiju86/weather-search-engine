@@ -1,14 +1,21 @@
 
 .App{
-    max-width: 600px;
+    max-width: 800px;
     margin: 30px auto;
     }
 .App h1{
     text-align: center;
-    color: rgb(215, 248, 247);
+    background: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-top: 50px;
 }
 .App footer{
     font-size: 11px;
     margin: 20px;
     text-align: center;
+}
+.App footer{
+    padding-bottom: 40px;
 }

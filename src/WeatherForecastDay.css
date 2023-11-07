@@ -1,0 +1,14 @@
+.Weatherforecast-day .day{
+    color:#C72EA2;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.Weatherforecast-day .WeatherForecast-max{
+    color:#668FE8;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+.Weatherforecast-day .WeatherForecast-min{
+    color:#C72EA2;
+}
+
