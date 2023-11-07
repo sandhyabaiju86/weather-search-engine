@@ -5,7 +5,6 @@ import Weather from "./Weather";
 export default function App() {
   return (
     <div className="App">
-      <h1>Weather Search Engine</h1>
       <Weather defaultCity = "Paris"/>
       <footer>
         <p>This project is created by <a href='mailti:sandhyacc28@gmail.com'> Sandhya Baiju</a> and is
