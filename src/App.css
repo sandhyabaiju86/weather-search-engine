@@ -1,7 +1,10 @@
 
 .App{
+    position: relative;
+    top:40px;
     max-width: 800px;
-   
+   margin: 0px auto;
+  
    
     }
 /* .App h1{
