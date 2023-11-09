@@ -3,6 +3,7 @@ import axios from 'axios';
 import { FallingLines } from 'react-loader-spinner';
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast"
+import 'bootstrap/dist/css/bootstrap.css';
 
 import "./Weather.css";
 
@@ -49,7 +50,7 @@ export default function Weather(props) {
 
     if (loaded) {
         return (
-            <div className="Weather">
+            <div className="Weather container">
                 <form onSubmit={handleOnSubmit}>
                     <div className="row">
                         <div className="col-8">
